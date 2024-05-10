@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> CatPhotoApp</title>
+    </head>
+    <body>
+    <h1>Cat Photos App</h1>
+    <section>
+        <h2>Cat Photos</h2>
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> here.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat"></a>
+    </section>
+    <section>
+        <h2>Cat list</h2>
+        <h3>Things cat loves:</h3>
+        <ul>
+            <li>cat nips</li>
+            <li>laser pointers</li> 
+            <li>lasagna</li>
+        </ul>
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+            <figcaption>Cat <em> loves</em> lasagna</figcaption>
+        </figure>
+        <h3>Top 3 things cat hates:</h3>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field."</img>
+            <figcaption>Cats <strong>hate</strong> other cats </figcaption>
+        </figure>
+        <section>
+            <h3>Cat Form</h3>
+            <form
+                action = "https://freecatphotoapp.com/submit-cat-photo">
+            </form>
+            <fieldset> <!-- group the radio button, make frame-->
+                <legend>Is your cat an outdoor and indoor cat></legend>
+                <label><input value="indoor" id="indoor" type="radio" name="indoor-outdoor">Indoor </label>
+                
+                <label><input value="outdoor" id="outdoor" type="radio" name="indoor-outdoor">Outdoor </label>
+            </fieldset>
+            <!-- 
+                If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes.
+                Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, 
+                which is not useful when you have multiple buttons.
+                Add a value attribute to both radio buttons. For convenience, set the button's value attribute to the same value as its id attribute.
+
+
+                The fieldset element is used to group related inputs and labels together in a web form. 
+                fieldset elements are block-level elements, meaning that they appear on a new line.
+                Nest the Indoor and Outdoor radio buttons within a fieldset element, and don't forget to indent the radio buttons.
+
+            -->
+            <fieldset>
+                <legend>What's your cat personality?</legend>
+                <input id="loving" type="checkbox" name="personality"> <label for="loving">Loving</label>
+                <input id= "lazy" type="checkbox" name = "personality" ><label for="lazy">lazy</label>
+                <input id="energetic" type="checkbox" name="personality" value="energetic"><label for="energetic">Energetic</label>
+            </fieldset>
+            <input type="text" name="catphotourl" placeholder="cat photo url" required > <!-- name to make sure only one option is selected in radio button -->
+            <button type="submit">Submit</button>
+            <footer>
+                <p> No Copyright - <a href="https://www.freecodecamp.org" >FreecodeCamp.ORG </a></p>
+            </footer>
+        </section>
+    </section>
+    </body>
+</html>
